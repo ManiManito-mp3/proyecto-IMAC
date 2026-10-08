@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Inventario Inicial</title>
+    <link rel="stylesheet" href="../css/inv_inicial.css">
+</head>
+<body>
+
+    <header class="encabezado-inv">
+        <div class="titulo-sistema">
+            <h1>CARGA DE INVENTARIO INICIAL</h1>
+            <p>Registro de productos y existencias base</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-inv">
+        
+        <!-- Panel Izquierdo: Carga Masiva con Archivo -->
+        <section class="panel-masivo">
+            <h2>Carga Masiva (Excel / CSV)</h2>
+            <p class="texto-ayuda">Sube tu plantilla de inventario para registrar multiples productos a la vez.</p>
+            
+            <div class="zona-upload" id="zona-archivo">
+                <span class="icono-upload">📊</span>
+                <p id="texto-upload">Haz clic aqui o arrastra tu archivo Excel/CSV</p>
+                <input type="file" id="subir-excel" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+            </div>
+            
+            <button class="btn-secundario btn-full" id="btn-procesar-archivo">Procesar Archivo</button>
+            
+            <div class="enlace-plantilla">
+                <a href="#">⬇️ Descargar plantilla de ejemplo</a>
+            </div>
+        </section>
+
+        <!-- Panel Derecho: Carga Manual -->
+        <section class="panel-manual">
+            <h2>Registro Manual de Producto</h2>
+            <form id="formulario-manual" class="formulario">
+                
+                <div class="grupo-input">
+                    <label for="codigo">Codigo del Producto</label>
+                    <input type="text" id="codigo" placeholder="Ej. PROD-001" required>
+                </div>
+                
+                <div class="grupo-input">
+                    <label for="nombre">Nombre o Descripcion</label>
+                    <input type="text" id="nombre" placeholder="Ej. Laptop Dell XPS" required>
+                </div>
+                
+                <!-- Campos en dos columnas -->
+                <div class="fila-inputs">
+                    <div class="grupo-input">
+                        <label for="cantidad">Cantidad Inicial</label>
+                        <input type="number" id="cantidad" min="1" placeholder="0" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="categoria">Categoria</label>
+                        <select id="categoria">
+                            <option value="Computacion">Computacion</option>
+                            <option value="Perifericos">Perifericos</option>
+                            <option value="Accesorios">Accesorios</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fila-inputs">
+                    <div class="grupo-input">
+                        <label for="costo">Costo Unitario</label>
+                        <input type="number" id="costo" step="0.01" placeholder="$ 0.00" required>
+                    </div>
+                    <div class="grupo-input">
+                        <label for="precio">Precio de Venta</label>
+                        <input type="number" id="precio" step="0.01" placeholder="$ 0.00" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primario">Agregar al Inventario</button>
+            </form>
+        </section>
+
+    </main>
+
+    <script src="../js/inv_inicial.js"></script>
+</body>
+</html>

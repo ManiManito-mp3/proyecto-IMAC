@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-compras {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; }
+.titulo-sistema p { color: #cbd5e1; font-size: 12px; }
+
+.acciones-usuario { display: flex; align-items: center; gap: 20px; }
+
+.etiqueta-consecutivo {
+    background-color: #d97706;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-secundario {
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    color: #1a365d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Contenedor y Paneles */
+.contenedor-compras {
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.panel-seccion {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #334155;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* Formularios Grid */
+.formulario-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.liquidador-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+.span-2 { grid-column: span 2; }
+
+.grupo-input label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 5px; }
+.grupo-input input, .grupo-input select {
+    width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 14px;
+}
+
+/* Campos Calculados (Gris en vez de Amarillo) */
+.campo-bloqueado {
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #475569;
+    font-weight: bold;
+    text-align: right;
+    outline: none;
+}
+
+.campo-bloqueado.destacado {
+    background-color: #e0f2fe !important;
+    border-color: #7dd3fc !important;
+    color: #0369a1;
+}
+
+/* Inputs con botones laterales */
+.input-con-boton {
+    display: flex;
+    gap: 5px;
+}
+.btn-accion-pequeno {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 0 12px;
+    cursor: pointer;
+}
+.btn-accion-pequeno:hover { background-color: #e2e8f0; }
+
+.acciones-liquidador { text-align: right; }
+.btn-primario {
+    padding: 12px 24px; background-color: #1a365d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;
+}
+.btn-primario:hover { background-color: #1e3a8a; }
+
+/* Tabla */
+.tabla-contenedor { overflow-x: auto; margin-bottom: 20px; border: 1px solid #e2e8f0; border-radius: 5px;}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+th { background-color: #f8fafc; color: #475569; font-weight: 600; }
+
+.texto-derecha { text-align: right; }
+.btn-texto-rojo { background: none; border: none; cursor: pointer; color: #ef4444; font-weight: 600; }
+.btn-texto-rojo:hover { color: #991b1b; text-decoration: underline; }
+
+/* Resumen Inferior */
+.resumen-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.grupo-botones-finales { display: flex; gap: 10px; }
+
+.btn-guardar { padding: 12px 24px; background-color: #166534; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 15px; }
+.btn-guardar:hover { background-color: #14532d; }
+
+.btn-limpiar { padding: 12px 24px; background-color: #f8fafc; color: #475569; border: 1px solid #cbd5e1; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.btn-limpiar:hover { background-color: #e2e8f0; }
+
+.cajas-totales { display: flex; gap: 15px; }
+.caja-total { display: flex; flex-direction: column; align-items: flex-end; }
+.caja-total span { font-size: 13px; font-weight: 600; color: #64748b; margin-bottom: 5px; }
+.caja-total input { width: 150px; padding: 10px; text-align: right; font-size: 16px; font-weight: bold; border: 1px solid #cbd5e1; border-radius: 5px; background-color: #f8fafc; }
+
+.total-final input { background-color: #1a365d; color: white; border-color: #1a365d; font-size: 18px; }

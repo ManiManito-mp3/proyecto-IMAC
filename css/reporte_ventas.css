@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-reporte {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; font-weight: 800;}
+.titulo-sistema p { color: #cbd5e1; font-size: 13px; margin-top: 5px; }
+
+.btn-secundario {
+    padding: 8px 16px; background-color: #f8fafc; color: #1a365d; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;
+}
+
+/* Contenedor principal */
+.contenedor-reporte {
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Panel de Filtros */
+.panel-filtros {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.fila-filtros {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.grupo-filtro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grupo-filtro label {
+    font-weight: bold;
+    color: #475569;
+    font-size: 14px;
+}
+
+.grupo-filtro input, .grupo-filtro select {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-primario {
+    padding: 9px 20px; background-color: #1a365d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-left: auto;
+}
+.btn-primario:hover { background-color: #1e3a8a; }
+
+.btn-exportar {
+    padding: 9px 20px; background-color: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;
+}
+.btn-exportar:hover { background-color: #059669; }
+
+/* Tabla */
+.panel-tabla {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.tabla-contenedor { overflow-x: auto; max-height: 600px;}
+table { width: 100%; border-collapse: collapse; }
+
+th { 
+    background-color: #0f172a; 
+    color: white; 
+    font-weight: bold; 
+    padding: 15px; 
+    text-align: left; 
+    font-size: 13px;
+    position: sticky;
+    top: 0;
+}
+
+td { 
+    padding: 12px 15px; 
+    border-bottom: 1px solid #e2e8f0; 
+    font-size: 14px; 
+    color: #334155;
+}
+
+tbody tr:nth-child(even) { background-color: #f8fafc; }
+tbody tr:hover { background-color: #f1f5f9; }
+
+.texto-derecha { text-align: right !important; }
+.texto-centro { text-align: center !important; }
+
+/* Estados de Factura */
+.badge { padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.estado-pagada { background-color: #dcfce3; color: #166534; }
+.estado-credito { background-color: #fef08a; color: #854d0e; }
+.estado-anulada { background-color: #fee2e2; color: #991b1b; }
+
+/* Botones de Accion Tabla */
+.btn-accion-tabla {
+    background: none; border: none; cursor: pointer; font-size: 18px; margin: 0 5px;
+}
+.btn-accion-tabla:hover { transform: scale(1.1); }
+
+/* Fila de Totales */
+tfoot .fila-totales td {
+    background-color: #1e293b;
+    color: white;
+    padding: 15px;
+}
+.titulo-total { font-size: 16px; font-weight: bold; }
+.valor-total { font-size: 18px; font-weight: bold; color: #fbbf24; font-family: monospace;}

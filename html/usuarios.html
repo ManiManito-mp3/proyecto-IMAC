@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../css/usuarios.css">
+</head>
+<body>
+
+    <header class="encabezado-usuarios">
+        <div class="titulo-sistema">
+            <h1>MÓDULO DE USUARIOS</h1>
+            <p>Gestión de accesos y permisos del sistema</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-usuarios">
+        <!-- Panel izquierdo: Formulario de registro -->
+        <section class="panel-formulario">
+            <h2>Registrar / Editar Usuario</h2>
+            <form id="formulario-usuario" class="formulario">
+                
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required placeholder="usuario@imac.com">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="password">Contraseña temporal</label>
+                    <input type="password" id="password" required placeholder="••••••••">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="rol">Rol del Sistema</label>
+                    <select id="rol">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Cajero">Cajero</option>
+                        <option value="Almacenista">Almacenista</option>
+                    </select>
+                </div>
+
+                <!-- Sección de permisos para bloquear módulos -->
+                <div class="grupo-permisos">
+                    <label>Módulos Permitidos (Desmarca para bloquear):</label>
+                    <div class="lista-permisos">
+                        <label><input type="checkbox" value="Inventario" checked> Inventario / Productos</label>
+                        <label><input type="checkbox" value="Ventas" checked> Ventas / Facturación</label>
+                        <label><input type="checkbox" value="Compras" checked> Compras</label>
+                        <label><input type="checkbox" value="Ajustes" checked> Ajustes del Sistema</label>
+                        <label><input type="checkbox" value="Reportes" checked> Reportes y Gráficas</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primario">Guardar Usuario</button>
+            </form>
+        </section>
+
+        <!-- Panel derecho: Tabla de usuarios activos -->
+        <section class="panel-tabla">
+            <h2>Usuarios Activos</h2>
+            <div class="tabla-contenedor">
+                <table id="tabla-usuarios">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila de ejemplo estática -->
+                        <tr>
+                            <td>Admin Principal</td>
+                            <td>admin@imac.com</td>
+                            <td><span class="badge admin">Administrador</span></td>
+                            <td><span class="badge activo">Activo</span></td>
+                            <td>
+                                <button class="btn-accion btn-editar">✏️</button>
+                                <button class="btn-accion btn-eliminar" disabled>🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/usuarios.js"></script>
+</body>
+</html>

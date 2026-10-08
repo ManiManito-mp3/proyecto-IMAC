@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Reporte de Ventas y Costos</title>
+    <link rel="stylesheet" href="../css/ventas_costos.css">
+</head>
+<body>
+
+    <header class="encabezado-reporte">
+        <div class="titulo-sistema">
+            <h1>REPORTE RESUMEN DE VENTAS Y COSTOS</h1>
+            <p>Analisis financiero de ganancias y perdidas entre fechas</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-reporte">
+        
+        <!-- Panel de Filtro de Fechas -->
+        <section class="panel-filtro">
+            <h2>Ventas entre fechas</h2>
+            <form id="form-fechas" class="fila-fechas">
+                <div class="grupo-input">
+                    <label for="fecha-inicial">Fecha Inicial</label>
+                    <input type="date" id="fecha-inicial" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="fecha-final">Fecha Final</label>
+                    <input type="date" id="fecha-final" required>
+                </div>
+                <div class="grupo-boton">
+                    <button type="submit" class="btn-primario">Generar Reporte 📊</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Panel de Resultados Financieros -->
+        <section class="panel-resultados">
+            <div class="cuadro-financiero">
+                
+                <!-- Ingresos -->
+                <div class="fila-dato ingreso">
+                    <span class="etiqueta">Ventas Totales</span>
+                    <span class="valor" id="val-ventas">$ 0.00</span>
+                </div>
+
+                <!-- Egresos / Costos -->
+                <div class="fila-dato costo">
+                    <span class="etiqueta">Costo de Venta</span>
+                    <span class="valor" id="val-costo-venta">$ 0.00</span>
+                </div>
+                <div class="fila-dato costo">
+                    <span class="etiqueta">Costo de Envio</span>
+                    <span class="valor" id="val-costo-envio">$ 0.00</span>
+                </div>
+                <div class="fila-dato costo">
+                    <span class="etiqueta">Otros Costos</span>
+                    <span class="valor" id="val-otros-costos">$ 0.00</span>
+                </div>
+
+                <!-- Separador -->
+                <hr class="linea-divisora">
+
+                <!-- Resultado Final -->
+                <div class="fila-dato resultado-final">
+                    <span class="etiqueta">Ganancia / Perdida</span>
+                    <span class="valor" id="val-ganancia">$ 0.00</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/ventas_costos.js"></script>
+</body>
+</html>

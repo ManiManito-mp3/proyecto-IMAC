@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Top 10 Más Vendidos</title>
+    <link rel="stylesheet" href="../css/top10.css">
+</head>
+<body>
+
+    <header class="encabezado-top10">
+        <div class="titulo-sistema">
+            <h1>MÓDULO DE VENTAS ESTELARES</h1>
+            <p>Ranking de los 10 productos con mayor rotación</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-imprimir">🖨️ Imprimir Reporte</button>
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-top10">
+        <!-- Tarjetas de resumen estadístico -->
+        <section class="resumen-estadistico">
+            <div class="tarjeta-dato">
+                <h3>Producto Estrella</h3>
+                <p class="dato-principal">Laptop Dell XPS 15</p>
+                <p class="dato-secundario">145 unidades este mes</p>
+            </div>
+            <div class="tarjeta-dato">
+                <h3>Categoría Dominante</h3>
+                <p class="dato-principal">Computación</p>
+                <p class="dato-secundario">45% de las ventas totales</p>
+            </div>
+            <div class="tarjeta-dato">
+                <h3>Ingresos Top 10</h3>
+                <p class="dato-principal">$45,200.00</p>
+                <p class="dato-secundario">Representa el 60% de los ingresos</p>
+            </div>
+        </section>
+
+        <!-- Panel de la Tabla de Ranking -->
+        <section class="panel-tabla">
+            <h2>Ranking Oficial</h2>
+            <div class="tabla-contenedor">
+                <table id="tabla-top10">
+                    <thead>
+                        <tr>
+                            <th>Posición</th>
+                            <th>Código</th>
+                            <th>Nombre del Producto</th>
+                            <th>Categoría</th>
+                            <th>Unidades Vendidas</th>
+                            <th>Total Generado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Primer Lugar (Oro) -->
+                        <tr class="fila-destacada">
+                            <td><span class="medalla oro">🥇 1</span></td>
+                            <td>PROD-001</td>
+                            <td><strong>Laptop Dell XPS 15</strong></td>
+                            <td>Computación</td>
+                            <td>145</td>
+                            <td class="monto">$125,000.00</td>
+                        </tr>
+                        <!-- Segundo Lugar (Plata) -->
+                        <tr class="fila-destacada">
+                            <td><span class="medalla plata">🥈 2</span></td>
+                            <td>PROD-045</td>
+                            <td>Monitor LG UltraWide 29"</td>
+                            <td>Periféricos</td>
+                            <td>120</td>
+                            <td class="monto">$42,000.00</td>
+                        </tr>
+                        <!-- Tercer Lugar (Bronce) -->
+                        <tr class="fila-destacada">
+                            <td><span class="medalla bronce">🥉 3</span></td>
+                            <td>PROD-012</td>
+                            <td>Teclado Mecánico Keychron</td>
+                            <td>Accesorios</td>
+                            <td>98</td>
+                            <td class="monto">$9,800.00</td>
+                        </tr>
+                        <!-- Cuarto Lugar en adelante -->
+                        <tr>
+                            <td><span class="posicion-normal">4</span></td>
+                            <td>PROD-088</td>
+                            <td>Mouse Logitech MX Master 3</td>
+                            <td>Accesorios</td>
+                            <td>85</td>
+                            <td class="monto">$8,500.00</td>
+                        </tr>
+                        <tr>
+                            <td><span class="posicion-normal">5</span></td>
+                            <td>PROD-033</td>
+                            <td>Disco Duro Externo 2TB</td>
+                            <td>Almacenamiento</td>
+                            <td>70</td>
+                            <td class="monto">$6,300.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/top10.js"></script>
+</body>
+</html>

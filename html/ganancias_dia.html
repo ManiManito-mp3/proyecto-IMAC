@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Ganancias Diarias</title>
+    <link rel="stylesheet" href="../css/ganancias_dia.css">
+</head>
+<body>
+
+    <header class="encabezado-ganancias">
+        <div class="titulo-sistema">
+            <h1>REPORTE DE GANANCIAS DIARIAS</h1>
+            <p>Analisis de rentabilidad y utilidad neta del dia actual</p>
+        </div>
+        <div class="acciones-usuario">
+            <div class="fecha-hoy" id="fecha-pantalla">Cargando fecha...</div>
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-ganancias">
+        
+        <!-- Tarjetas de Resumen de Rentabilidad -->
+        <section class="panel-resumen">
+            <div class="tarjeta-caja tarjeta-ventas">
+                <h3>Ventas Totales (Hoy)</h3>
+                <p id="resumen-ventas">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja tarjeta-costos">
+                <h3>Costo de la Mercancia</h3>
+                <p id="resumen-costos">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja tarjeta-utilidad">
+                <h3>Ganancia Neta</h3>
+                <p id="resumen-ganancia">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja tarjeta-margen">
+                <h3>Margen Promedio</h3>
+                <p id="resumen-margen">0%</p>
+            </div>
+        </section>
+
+        <!-- Tabla Detallada por Factura -->
+        <section class="panel-tabla">
+            <div class="cabecera-tabla">
+                <h2>Detalle de Utilidad por Factura</h2>
+                <button class="btn-exportar" id="btn-exportar-ganancias">📊 Exportar Reporte</button>
+            </div>
+            <div class="tabla-contenedor">
+                <table id="tabla-ganancias-dia">
+                    <thead>
+                        <tr>
+                            <th>HORA</th>
+                            <th>FACTURA</th>
+                            <th>CLIENTE</th>
+                            <th class="texto-derecha">INGRESO (VENTA)</th>
+                            <th class="texto-derecha">COSTO BASE</th>
+                            <th class="texto-derecha">GANANCIA LÍQUIDA</th>
+                            <th class="texto-centro">MARGEN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-ganancias">
+                        <!-- Filas dinamicas con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/ganancias_dia.js"></script>
+</body>
+</html>

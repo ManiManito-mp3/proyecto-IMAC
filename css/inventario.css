@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-inventario {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; }
+.titulo-sistema p { color: #cbd5e1; font-size: 12px; }
+
+.acciones-usuario { display: flex; gap: 15px; }
+
+.btn-secundario {
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    color: #1a365d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primario {
+    padding: 8px 16px;
+    background-color: #d97706;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Contenedor */
+.contenedor-inventario {
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Barra de herramientas */
+.barra-herramientas {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.grupo-busqueda input {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.grupo-filtros {
+    display: flex;
+    gap: 15px;
+}
+
+.grupo-filtros select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 200px;
+}
+
+/* Tabla */
+.panel-tabla {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+th { background-color: #f8fafc; color: #475569; font-weight: 600; }
+
+.precio-venta { font-weight: bold; color: #166534; }
+
+/* Badges para el nivel de inventario */
+.badge { padding: 5px 10px; border-radius: 12px; font-size: 12px; font-weight: bold; }
+.stock-alto { background-color: #dcfce3; color: #166534; }
+.stock-medio { background-color: #fef08a; color: #854d0e; }
+.stock-bajo { background-color: #fee2e2; color: #991b1b; }
+
+.btn-accion { background: none; border: none; cursor: pointer; font-size: 16px; margin-right: 5px; }
+
+.btn-texto {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 12px;
+    transition: color 0.2s ease; /* Hace que el cambio de color sea suave */
+}
+
+/* Colores para el boton Editar */
+.btn-editar {
+    color: #3b82f6; /* Azul base */
+}
+
+.btn-editar:hover {
+    color: #1e3a8a; /* Azul oscuro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Colores para el boton Eliminar */
+.btn-eliminar {
+    color: #ef4444; /* Rojo base */
+}
+
+.btn-eliminar:hover {
+    color: #991b1b; /* Rojo oscuro al pasar el mouse */
+    text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Base de Datos de Ventas</title>
+    <link rel="stylesheet" href="../css/base_ventas.css">
+</head>
+<body>
+
+    <header class="encabezado-base">
+        <div class="titulo-sistema">
+            <h1>BASE DE DATOS: VENTAS</h1>
+            <p>Registro detallado de transacciones de salida (Formato Excel)</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-base">
+        
+        <!-- Panel de Filtros -->
+        <section class="barra-herramientas">
+            <div class="filtros-excel">
+                <div class="grupo-filtro">
+                    <label>Mes:</label>
+                    <select id="filtro-mes">
+                        <option value="Todos">Todos</option>
+                        <option value="10">Octubre</option>
+                    </select>
+                </div>
+                <div class="grupo-filtro">
+                    <label>Cliente:</label>
+                    <input type="text" id="filtro-cliente" placeholder="Buscar cliente o CC...">
+                </div>
+            </div>
+            <div class="grupo-botones">
+                <button class="btn-excel" id="btn-descargar-excel">
+                    <span class="icono-btn">📗</span> Descargar a Excel (.xlsx)
+                </button>
+            </div>
+        </section>
+
+        <!-- Tabla Cruda tipo Excel -->
+        <section class="panel-tabla-excel">
+            <div class="tabla-contenedor">
+                <table id="tabla-base-ventas">
+                    <thead>
+                        <tr>
+                            <th>ID VENTA</th>
+                            <th>FECHA</th>
+                            <th>DOC CLIENTE</th>
+                            <th>NOMBRE CLIENTE</th>
+                            <th>COD PROD</th>
+                            <th>PRODUCTO</th>
+                            <th class="texto-centro">CANTIDAD</th>
+                            <th class="texto-derecha">PRECIO UNIT.</th>
+                            <th class="texto-derecha">SUBTOTAL</th>
+                            <th class="texto-derecha">IVA</th>
+                            <th class="texto-derecha">TOTAL FINAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-base-ventas">
+                        <!-- Las filas se cargaran con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/base_ventas.js"></script>
+</body>
+</html>

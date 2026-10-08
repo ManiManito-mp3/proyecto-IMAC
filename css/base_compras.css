@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: #f4f6f9; }
+
+/* Encabezado */
+.encabezado-base {
+    background-color: #1a365d; color: white; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-bottom: 4px solid #107c41; /* Linea verde Excel */
+}
+.titulo-sistema h1 { color: #107c41; font-size: 24px; font-weight: 800; }
+.titulo-sistema p { color: #cbd5e1; font-size: 13px; margin-top: 5px; }
+.btn-secundario { padding: 8px 16px; background-color: #f8fafc; color: #1a365d; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
+
+.contenedor-base { padding: 20px 40px; max-width: 100%; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+
+/* Barra de Herramientas */
+.barra-herramientas {
+    display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 25px; border-radius: 8px; border: 1px solid #e2e8f0;
+}
+
+.filtros-excel { display: flex; gap: 20px; }
+.grupo-filtro { display: flex; align-items: center; gap: 10px; }
+.grupo-filtro label { font-weight: bold; color: #475569; font-size: 13px; }
+.grupo-filtro input, .grupo-filtro select { padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 4px; font-size: 13px; }
+
+.btn-excel { 
+    padding: 10px 20px; background-color: #107c41; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 14px; display: flex; align-items: center; gap: 8px; transition: background-color 0.2s;
+}
+.btn-excel:hover { background-color: #0c5e31; }
+.icono-btn { font-size: 18px; }
+
+/* Tabla estilo Excel */
+.panel-tabla-excel { background: white; border: 1px solid #cbd5e1; overflow: hidden; }
+.tabla-contenedor { overflow-x: auto; max-height: 70vh; }
+table { width: 100%; border-collapse: collapse; white-space: nowrap; }
+
+/* Encabezados y celdas rigidas como Excel */
+th { 
+    background-color: #f3f4f6; color: #374151; font-weight: bold; padding: 10px 15px; text-align: left; font-size: 12px; border: 1px solid #d1d5db; position: sticky; top: 0; z-index: 10;
+}
+td { 
+    padding: 8px 15px; border: 1px solid #e5e7eb; font-size: 12px; color: #4b5563; font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+tbody tr:hover { background-color: #e5e7eb; } /* Color de seleccion gris como en Excel */
+
+.texto-derecha { text-align: right !important; }
+.texto-centro { text-align: center !important; }
+
+/* Resaltar columnas financieras */
+.col-dinero { font-family: monospace; font-size: 13px; }
+.col-total { font-weight: bold; color: #107c41; background-color: #f0fdf4; }

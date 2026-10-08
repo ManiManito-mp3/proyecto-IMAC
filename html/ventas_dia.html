@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Ventas del Dia</title>
+    <link rel="stylesheet" href="../css/ventas_dia.css">
+</head>
+<body>
+
+    <header class="encabezado-dia">
+        <div class="titulo-sistema">
+            <h1>REPORTE DE VENTAS DEL DIA</h1>
+            <p>Cierre de caja y resumen de transacciones de hoy</p>
+        </div>
+        <div class="acciones-usuario">
+            <div class="fecha-hoy" id="fecha-pantalla">07 de Octubre de 2026</div>
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-dia">
+        
+        <!-- Tarjetas de Resumen Financiero -->
+        <section class="panel-resumen">
+            <div class="tarjeta-caja tarjeta-total">
+                <h3>TOTAL INGRESOS HOY</h3>
+                <p id="caja-total">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja">
+                <h3>En Efectivo</h3>
+                <p id="caja-efectivo" class="texto-verde">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja">
+                <h3>En Transferencia</h3>
+                <p id="caja-transferencia" class="texto-azul">$ 0.00</p>
+            </div>
+            <div class="tarjeta-caja">
+                <h3>Ventas a Credito</h3>
+                <p id="caja-credito" class="texto-naranja">$ 0.00</p>
+            </div>
+        </section>
+
+        <!-- Tabla de Facturas del Dia -->
+        <section class="panel-tabla">
+            <div class="cabecera-tabla">
+                <h2>Detalle de Facturas (Hoy)</h2>
+                <button class="btn-imprimir" id="btn-imprimir-cierre">🖨️ Imprimir Cierre de Caja</button>
+            </div>
+            <div class="tabla-contenedor">
+                <table id="tabla-ventas-dia">
+                    <thead>
+                        <tr>
+                            <th>HORA</th>
+                            <th>FACTURA</th>
+                            <th>CLIENTE</th>
+                            <th>METODO PAGO</th>
+                            <th class="texto-derecha">SUBTOTAL</th>
+                            <th class="texto-derecha">IVA</th>
+                            <th class="texto-derecha">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-dia">
+                        <!-- Filas dinamicas con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/ventas_dia.js"></script>
+</body>
+</html>

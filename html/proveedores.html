@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Directorio de Proveedores</title>
+    <link rel="stylesheet" href="../css/proveedores.css">
+</head>
+<body>
+
+    <header class="encabezado-directorio">
+        <div class="titulo-sistema">
+            <h1>DIRECTORIO DE PROVEEDORES</h1>
+            <p>Gestion de empresas distribuidoras y contactos</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-directorio">
+        
+        <!-- Panel de Herramientas -->
+        <section class="barra-herramientas">
+            <div class="grupo-busqueda">
+                <input type="text" id="buscar-proveedor" placeholder="🔍 Buscar por NIT o Razon Social...">
+            </div>
+            <div class="grupo-botones">
+                <button class="btn-primario" id="btn-nuevo-proveedor">➕ Nuevo Proveedor</button>
+            </div>
+        </section>
+
+        <!-- Formulario de Registro (Oculto por defecto) -->
+        <section class="panel-formulario" id="panel-registro-proveedor" style="display: none;">
+            <h2>Registrar Nuevo Proveedor</h2>
+            <form id="form-proveedor" class="grid-formulario">
+                <div class="grupo-input">
+                    <label for="nit-proveedor">NIT</label>
+                    <input type="text" id="nit-proveedor" placeholder="Ej. 900123456-1" required>
+                </div>
+                <div class="grupo-input span-2">
+                    <label for="nom-proveedor">Razon Social / Empresa</label>
+                    <input type="text" id="nom-proveedor" placeholder="Ej. Cementos Nacionales S.A." required>
+                </div>
+                <div class="grupo-input">
+                    <label for="contacto-proveedor">Nombre del Asesor</label>
+                    <input type="text" id="contacto-proveedor" placeholder="Ej. Juan Perez">
+                </div>
+                <div class="grupo-input">
+                    <label for="tel-proveedor">Telefono Fijo / Celular</label>
+                    <input type="text" id="tel-proveedor" placeholder="Ej. 3001234567">
+                </div>
+                <div class="grupo-input">
+                    <label for="ciudad-proveedor">Ciudad</label>
+                    <input type="text" id="ciudad-proveedor" placeholder="Ej. Bogota">
+                </div>
+                <div class="grupo-input span-3">
+                    <label for="email-proveedor">Correo Electronico (Para Ordenes de Compra)</label>
+                    <input type="email" id="email-proveedor" placeholder="ventas@empresa.com">
+                </div>
+                <div class="acciones-form">
+                    <button type="button" class="btn-cancelar" id="btn-cancelar-registro">Cancelar</button>
+                    <button type="submit" class="btn-guardar">💾 Guardar Proveedor</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Tabla del Directorio -->
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-proveedores">
+                    <thead>
+                        <tr>
+                            <th>NIT</th>
+                            <th>RAZON SOCIAL</th>
+                            <th>ASESOR</th>
+                            <th>TELEFONO</th>
+                            <th>CIUDAD</th>
+                            <th class="texto-centro">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-proveedores">
+                        <!-- Las filas se cargaran con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/proveedores.js"></script>
+</body>
+</html>

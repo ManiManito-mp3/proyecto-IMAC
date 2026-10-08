@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado Moderno */
+.encabezado-productos {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #1a365d;
+}
+
+.titulo-sistema h1 { color: #1a365d; font-size: 24px; font-weight: 800; }
+.titulo-sistema p { color: #64748b; font-size: 13px; margin-top: 4px; }
+
+.acciones-superiores { display: flex; gap: 30px; }
+
+.btn-icono-texto {
+    display: flex; flex-direction: column; align-items: center; background: none; border: none; cursor: pointer; color: #475569; transition: transform 0.2s, color 0.2s;
+}
+.btn-icono-texto .icono { font-size: 26px; margin-bottom: 5px; }
+.btn-icono-texto span:last-child { font-size: 11px; font-weight: bold; letter-spacing: 0.5px; }
+.btn-icono-texto:hover { color: #d97706; transform: translateY(-2px); }
+.text-verde { color: #166534; }
+.text-verde:hover { color: #14532d; }
+
+/* Contenedor y Tabla */
+.contenedor-productos { padding: 30px 40px; max-width: 100%; margin: 0 auto; }
+
+.panel-tabla {
+    background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; overflow: hidden;
+}
+
+.tabla-contenedor { overflow-x: auto; max-height: 70vh; }
+
+table { width: 100%; border-collapse: collapse; white-space: nowrap; }
+
+th { 
+    background-color: #1e293b; color: white; font-weight: 600; padding: 15px 12px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; position: sticky; top: 0; z-index: 10;
+}
+
+td { padding: 12px; border-bottom: 1px solid #f1f5f9; font-size: 13px; color: #334155; vertical-align: middle; }
+
+tbody tr:nth-child(even) { background-color: #f8fafc; }
+tbody tr:hover { background-color: #f1f5f9; }
+
+.centro { text-align: center; }
+.derecha { text-align: right; }
+.texto-codigo { font-weight: bold; color: #1a365d; font-size: 14px; background-color: #e2e8f0; padding: 4px 10px; border-radius: 4px;}
+
+/* === ESTILOS MODERNOS PARA LA FILA EDITABLE === */
+.fila-edicion {
+    background-color: #fffbeb !important; /* Fondo sutil naranja/amarillo */
+    box-shadow: inset 0 2px 5px rgba(217, 119, 6, 0.1);
+}
+
+.input-celda {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.input-celda:focus {
+    border-color: #d97706; /* Naranja IMAC */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+}
+
+.input-precio { width: 105px; text-align: right; font-family: monospace; font-size: 14px; }
+.input-desc { min-width: 220px; }
+.input-corto { min-width: 130px; }
+
+.btn-guardar-fila {
+    background-color: #10b981; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 13px; display: flex; align-items: center; gap: 6px; transition: background-color 0.2s, transform 0.1s;
+}
+.btn-guardar-fila:hover { background-color: #059669; transform: scale(1.05); }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Reporte General de Ventas</title>
+    <link rel="stylesheet" href="../css/reporte_ventas.css">
+</head>
+<body>
+
+    <header class="encabezado-reporte">
+        <div class="titulo-sistema">
+            <h1>HISTORIAL Y REPORTE DE VENTAS</h1>
+            <p>Listado detallado de facturas emitidas</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-reporte">
+        
+        <!-- Panel de Filtros -->
+        <section class="panel-filtros">
+            <form id="form-filtros" class="fila-filtros">
+                
+                <div class="grupo-filtro">
+                    <label for="fecha-desde">Desde:</label>
+                    <input type="date" id="fecha-desde">
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="fecha-hasta">Hasta:</label>
+                    <input type="date" id="fecha-hasta">
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="filtro-estado">Estado:</label>
+                    <select id="filtro-estado">
+                        <option value="Todos">Todas las facturas</option>
+                        <option value="Pagada">Pagadas (Contado)</option>
+                        <option value="Credito">Pendientes (Credito)</option>
+                        <option value="Anulada">Anuladas</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-primario" id="btn-filtrar">🔍 Buscar</button>
+                <button type="button" class="btn-exportar" id="btn-exportar">📊 Exportar Excel</button>
+            </form>
+        </section>
+
+        <!-- Panel de la Tabla de Facturas -->
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-ventas">
+                    <thead>
+                        <tr>
+                            <th>FACTURA</th>
+                            <th>FECHA</th>
+                            <th>CLIENTE</th>
+                            <th>METODO PAGO</th>
+                            <th class="texto-centro">ESTADO</th>
+                            <th class="texto-derecha">TOTAL FACTURA</th>
+                            <th class="texto-centro">ACCION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-ventas">
+                        <!-- Las filas se llenaran con JavaScript -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="fila-totales">
+                            <td colspan="5" class="texto-derecha titulo-total">TOTAL VENTAS DEL PERIODO:</td>
+                            <td class="texto-derecha valor-total" id="gran-total-ventas">$ 0.00</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/reporte_ventas.js"></script>
+</body>
+</html>

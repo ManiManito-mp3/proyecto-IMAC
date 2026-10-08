@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Ajustes del Sistema</title>
+    <link rel="stylesheet" href="../css/ajustes.css">
+</head>
+<body>
+
+    <header class="encabezado-ajustes">
+        <div class="titulo-sistema">
+            <h1>MODULO DE AJUSTES</h1>
+            <p>Configuracion general de la empresa y sistema</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-ajustes">
+        <!-- Panel Izquierdo: Datos de la empresa -->
+        <section class="panel-formulario">
+            <h2>Datos del Negocio y Sistema</h2>
+            <form id="formulario-ajustes" class="formulario">
+                
+                <div class="grupo-input">
+                    <label for="nombre-empresa">Nombre de la Empresa</label>
+                    <input type="text" id="nombre-empresa" value="IMAC" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="moneda">Moneda Principal</label>
+                    <select id="moneda">
+                        <option value="COP">Pesos Colombianos (COP)</option>
+                        <option value="MXN">Pesos Mexicanos (MXN)</option>
+                        <option value="USD">Dolares (USD)</option>
+                    </select>
+                </div>
+
+                <!-- NUEVA ZONA DE CARGA DE ARCHIVOS -->
+                <div class="grupo-input">
+                    <label>Subir fotos al servidor</label>
+                    <div class="zona-upload">
+                        <span class="icono-upload">📁</span>
+                        <p id="texto-upload">Haz clic aqui para seleccionar fotos o arrastralas</p>
+                        <!-- El input real esta oculto pero cubre toda la caja -->
+                        <input type="file" id="subir-foto" accept="image/*" multiple>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="direccion">Direccion Principal</label>
+                    <input type="text" id="direccion" placeholder="Ej. Avenida Central #123">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="telefono">Telefono de Contacto</label>
+                    <input type="text" id="telefono" placeholder="Ej. 3001234567">
+                </div>
+
+                <button type="submit" class="btn-primario">Guardar Configuracion</button>
+            </form>
+        </section>
+
+        <!-- Panel Derecho: Mantenimiento del Sistema -->
+        <section class="panel-mantenimiento">
+            <h2>Mantenimiento y Seguridad</h2>
+            
+            <div class="tarjeta-accion">
+                <div class="info-accion">
+                    <h3>Copia de Seguridad</h3>
+                    <p>Descarga un respaldo completo de tus productos y ventas.</p>
+                </div>
+                <button class="btn-secundario" id="btn-respaldo">Generar Backup</button>
+            </div>
+
+            <div class="tarjeta-accion alerta">
+                <div class="info-accion">

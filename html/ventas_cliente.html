@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Ventas por Cliente</title>
+    <link rel="stylesheet" href="../css/ventas_cliente.css">
+</head>
+<body>
+
+    <header class="encabezado-reporte">
+        <div class="titulo-sistema">
+            <h1>REPORTE DE VENTAS POR CLIENTE</h1>
+            <p>Analisis de rentabilidad agrupado por cliente</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-reporte">
+        
+        <!-- Panel de Filtros (Igual a tu Excel) -->
+        <section class="panel-filtros">
+            <form id="form-filtros" class="fila-filtros">
+                
+                <div class="grupo-filtro">
+                    <label for="filtro-anio">Anio:</label>
+                    <select id="filtro-anio">
+                        <option value="Todos">(Todas)</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="filtro-mes">Mes:</label>
+                    <select id="filtro-mes">
+                        <option value="Todos">(Todas)</option>
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                    </select>
+                </div>
+
+                <div class="grupo-filtro">
+                    <label for="filtro-condicion">Condicion:</label>
+                    <select id="filtro-condicion">
+                        <option value="Todos">(Todas)</option>
+                        <option value="Contado">Contado</option>
+                        <option value="Credito">Credito</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn-primario" id="btn-filtrar">🔍 Buscar</button>
+                <button type="button" class="btn-exportar" id="btn-exportar">📊 Exportar</button>
+            </form>
+        </section>
+
+        <!-- Panel de la Tabla de Clientes -->
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-clientes">
+                    <thead>
+                        <tr>
+                            <th>CLIENTE</th>
+                            <th class="texto-derecha">TOTAL COSTO</th>
+                            <th class="texto-derecha">VENTAS</th>
+                            <th class="texto-derecha">GANANCIA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-clientes">
+                        <!-- Las filas se llenaran con JavaScript -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="fila-totales">
+                            <td>Total general</td>
+                            <td class="texto-derecha" id="gran-total-costo">$ 0.00</td>
+                            <td class="texto-derecha" id="gran-total-ventas">$ 0.00</td>
+                            <td class="texto-derecha" id="gran-total-ganancia">$ 0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/ventas_cliente.js"></script>
+</body>
+</html>

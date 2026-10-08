@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-reporte {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; text-transform: uppercase; }
+.titulo-sistema p { color: #cbd5e1; font-size: 13px; }
+
+.btn-secundario {
+    padding: 8px 16px; background-color: #f8fafc; color: #1a365d; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;
+}
+
+/* Contenedor principal */
+.contenedor-reporte {
+    padding: 30px 40px;
+    max-width: 800px; /* Mas estrecho para centrar la atencion en los numeros */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.panel-filtro, .panel-resultados {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #334155; font-size: 18px; margin-bottom: 20px; text-align: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px;
+}
+
+/* Filtros de fecha */
+.fila-fechas {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.grupo-input { display: flex; flex-direction: column; }
+.grupo-input label { font-size: 13px; font-weight: bold; color: #475569; margin-bottom: 5px; text-align: center; background-color: #84cc16; color: white; padding: 5px; border-radius: 4px 4px 0 0; }
+.grupo-input input {
+    padding: 10px; border: 1px solid #cbd5e1; border-radius: 0 0 4px 4px; font-size: 15px; width: 200px; text-align: center;
+}
+
+.btn-primario {
+    padding: 12px 24px; background-color: #1a365d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 15px; height: 42px;
+}
+.btn-primario:hover { background-color: #1e3a8a; }
+
+/* Cuadro Financiero (Estilo similar a tu Excel pero web) */
+.cuadro-financiero {
+    background-color: #0f172a; /* Azul muy oscuro casi negro */
+    border-radius: 8px;
+    padding: 20px 30px;
+    color: white;
+}
+
+.fila-dato {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-size: 18px;
+}
+
+.fila-dato .etiqueta { font-weight: 600; color: #cbd5e1; }
+.fila-dato .valor { font-family: monospace; font-size: 20px; text-align: right; }
+
+/* Colores segun el tipo de dato */
+.ingreso .valor { color: #4ade80; /* Verde brillante */ }
+.costo .valor { color: #f87171; /* Rojo suave */ }
+
+.linea-divisora {
+    border: 0;
+    border-top: 2px dashed #334155;
+    margin: 15px 0;
+}
+
+.resultado-final {
+    background-color: #1e293b;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    border-left: 5px solid #d97706; /* Detalle naranja */
+}
+
+.resultado-final .etiqueta { color: white; font-size: 20px; font-weight: bold; }
+.resultado-final .valor { color: #fbbf24; font-size: 24px; font-weight: bold; } /* Amarillo ganancia */

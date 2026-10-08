@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Inventario General</title>
+    <link rel="stylesheet" href="../css/inventario.css">
+</head>
+<body>
+
+    <header class="encabezado-inventario">
+        <div class="titulo-sistema">
+            <h1>MODULO DE INVENTARIO</h1>
+            <p>Control de inventario general y existencias</p>
+        </div>
+        <div class="acciones-usuario">
+      
+            <button class="btn-primario" id="btn-nuevo-producto">+ Nuevo Producto</button>
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-inventario">
+        
+
+        <section class="barra-herramientas">
+            <div class="grupo-busqueda">
+                <input type="text" id="buscar-producto" placeholder="🔍 Buscar por codigo o nombre...">
+            </div>
+            
+            <div class="grupo-filtros">
+                <select id="filtro-categoria">
+                    <option value="Todas">Todas las categorias</option>
+                    <option value="Construccion">Materiales de Construccion</option>
+                    <option value="Herramientas">Herramientas</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                </select>
+                
+                <button class="btn-secundario" id="btn-exportar">Exportar Excel</button>
+            </div>
+        </section>
+
+      
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-productos">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Categoria</th>
+                            <th>Unidad</th>
+                            <th>Stock</th>
+                            <th>Costo Unit.</th>
+                            <th>Precio Venta</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     
+                        <tr>
+                            <td>PROD-001</td>
+                            <td><strong>Laptop Dell XPS 15</strong></td>
+                            <td>Tecnologia</td>
+                            <td>Unidad</td>
+                            <td><span class="badge stock-alto">45</span></td>
+                            <td>$ 2,500,000</td>
+                            <td class="precio-venta">$ 3,200,000</td>
+                            <td>
+                                <button class="btn-texto btn-editar">Editar</button>
+                                <button class="btn-texto btn-eliminar">Eliminar</button>
+                            </td>
+                            </td>
+                        </tr>
+                  
+                        <tr>
+                            <td>MAT-104</td>
+                            <td><strong>Arena de Rio Lavada</strong></td>
+                            <td>Construccion</td>
+                            <td>Bulto (50kg)</td>
+                            <td><span class="badge stock-medio">120</span></td>
+                            <td>$ 8,000</td>
+                            <td class="precio-venta">$ 12,000</td>
+                            <td>
+                                <button class="btn-texto btn-editar">Editar</button>
+                                <button class="btn-texto btn-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>HER-022</td>
+                            <td><strong>Taladro Percutor Bosch</strong></td>
+                            <td>Herramientas</td>
+                            <td>Unidad</td>
+                            <td><span class="badge stock-bajo">2</span></td>
+                            <td>$ 180,000</td>
+                            <td class="precio-venta">$ 250,000</td>
+                           <td>
+                                <button class="btn-texto btn-editar">Editar</button>
+                                <button class="btn-texto btn-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/inventario.js"></script>
+</body>
+</html>

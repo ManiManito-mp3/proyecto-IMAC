@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Histórico de Movimientos</title>
+    <link rel="stylesheet" href="../css/historico.css">
+</head>
+<body>
+
+    <header class="encabezado-historico">
+        <div class="titulo-sistema">
+            <h1>MÓDULO HISTÓRICO</h1>
+            <p>Registro y trazabilidad de operaciones del sistema</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-historico">
+        <!-- Panel Superior: Filtros de Búsqueda -->
+        <section class="panel-filtros">
+            <h2>Filtros de Búsqueda</h2>
+            <form id="formulario-filtros" class="fila-filtros">
+                <div class="grupo-input">
+                    <label for="fecha-inicio">Desde</label>
+                    <input type="date" id="fecha-inicio" required>
+                </div>
+                
+                <div class="grupo-input">
+                    <label for="fecha-fin">Hasta</label>
+                    <input type="date" id="fecha-fin" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="tipo-movimiento">Tipo de Movimiento</label>
+                    <select id="tipo-movimiento">
+                        <option value="Todos">Todos los movimientos</option>
+                        <option value="Venta">Ventas</option>
+                        <option value="Compra">Compras</option>
+                        <option value="Ajuste">Ajustes de Inventario</option>
+                    </select>
+                </div>
+
+                <div class="grupo-boton">
+                    <button type="submit" class="btn-primario">🔍 Buscar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Panel Inferior: Tabla de Registros -->
+        <section class="panel-tabla">
+            <h2>Registro de Operaciones</h2>
+            <div class="tabla-contenedor">
+                <table id="tabla-historico">
+                    <thead>
+                        <tr>
+                            <th>Fecha y Hora</th>
+                            <th>Usuario</th>
+                            <th>Tipo</th>
+                            <th>Detalle de Operación</th>
+                            <th>Monto / Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filas de ejemplo estáticas -->
+                        <tr>
+                            <td>2023-10-25 14:30</td>
+                            <td>Admin Principal</td>
+                            <td><span class="badge venta">Venta</span></td>
+                            <td>Factura #001 - Cliente: Juan Pérez</td>
+                            <td class="monto positivo">+$150.000</td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-25 10:15</td>
+                            <td>Almacenista 1</td>
+                            <td><span class="badge compra">Compra</span></td>
+                            <td>Ingreso de mercancía - Proveedor X</td>
+                            <td class="monto negativo">-$50.000</td>
+                        </tr>
+                        <tr>
+                            <td>2023-10-24 16:45</td>
+                            <td>Admin Principal</td>
+                            <td><span class="badge ajuste">Ajuste</span></td>
+                            <td>Actualización de tasa IVA a 19%</td>
+                            <td class="monto neutro">N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/historico.js"></script>
+</body>
+</html>

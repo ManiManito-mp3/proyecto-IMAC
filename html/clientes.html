@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Directorio de Clientes</title>
+    <link rel="stylesheet" href="../css/clientes.css">
+</head>
+<body>
+
+    <header class="encabezado-directorio">
+        <div class="titulo-sistema">
+            <h1>DIRECTORIO DE CLIENTES</h1>
+            <p>Gestion de contactos y facturacion</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-directorio">
+        
+        <!-- Panel de Herramientas -->
+        <section class="barra-herramientas">
+            <div class="grupo-busqueda">
+                <input type="text" id="buscar-cliente" placeholder="🔍 Buscar por NIT, CC o Nombre...">
+            </div>
+            <div class="grupo-botones">
+                <button class="btn-primario" id="btn-nuevo-cliente">➕ Nuevo Cliente</button>
+            </div>
+        </section>
+
+        <!-- Formulario de Registro (Oculto por defecto) -->
+        <section class="panel-formulario" id="panel-registro-cliente" style="display: none;">
+            <h2>Registrar Nuevo Cliente</h2>
+            <form id="form-cliente" class="grid-formulario">
+                <div class="grupo-input">
+                    <label for="doc-cliente">NIT / C.C.</label>
+                    <input type="text" id="doc-cliente" placeholder="Ej. 10203040" required>
+                </div>
+                <div class="grupo-input span-2">
+                    <label for="nom-cliente">Nombre Completo o Razon Social</label>
+                    <input type="text" id="nom-cliente" placeholder="Ej. D.S Construcciones" required>
+                </div>
+                <div class="grupo-input">
+                    <label for="tel-cliente">Telefono / Celular</label>
+                    <input type="text" id="tel-cliente" placeholder="Ej. 3001234567">
+                </div>
+                <div class="grupo-input span-2">
+                    <label for="dir-cliente">Direccion</label>
+                    <input type="text" id="dir-cliente" placeholder="Ej. Calle 10 # 20-30">
+                </div>
+                <div class="grupo-input span-2">
+                    <label for="email-cliente">Correo Electronico</label>
+                    <input type="email" id="email-cliente" placeholder="ejemplo@correo.com">
+                </div>
+                <div class="acciones-form">
+                    <button type="button" class="btn-cancelar" id="btn-cancelar-registro">Cancelar</button>
+                    <button type="submit" class="btn-guardar">💾 Guardar Cliente</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Tabla del Directorio -->
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-clientes">
+                    <thead>
+                        <tr>
+                            <th>NIT / C.C.</th>
+                            <th>NOMBRE DEL CLIENTE</th>
+                            <th>TELEFONO</th>
+                            <th>DIRECCION</th>
+                            <th>CORREO</th>
+                            <th class="texto-centro">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-clientes">
+                        <!-- Las filas se cargaran con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/clientes.js"></script>
+</body>
+</html>

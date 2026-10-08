@@ -1,0 +1,108 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9; /* Fondo gris muy claro */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor central */
+.tarjeta-login {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+/* Textos del encabezado */
+.encabezado-login {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.encabezado-login h2 {
+    color: #1a365d; /* Azul corporativo */
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.encabezado-login p {
+    color: #64748b;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Estilos de los campos de entrada */
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #d97706; /* Acento naranja/dorado */
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+/* Botón principal */
+.btn-ingresar {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a365d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-ingresar:hover {
+    background-color: #274b7e;
+}
+
+/* Enlace inferior */
+.pie-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pie-login a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.pie-login a:hover {
+    text-decoration: underline;
+}

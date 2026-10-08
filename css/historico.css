@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-historico {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; }
+.titulo-sistema p { color: #cbd5e1; font-size: 12px; }
+
+.btn-secundario {
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    color: #1a365d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Contenedor principal */
+.contenedor-historico {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.panel-filtros, .panel-tabla {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #334155;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* Filtros en línea */
+.fila-filtros {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.grupo-input { flex: 1; }
+.grupo-input label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 5px; }
+.grupo-input input, .grupo-input select {
+    width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 14px;
+}
+
+.grupo-boton { flex: 0.5; }
+.btn-primario {
+    width: 100%; padding: 10px; background-color: #1a365d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;
+}
+
+/* Tabla */
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+th { background-color: #f8fafc; color: #475569; font-weight: 600; }
+
+.badge { padding: 4px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+.badge.venta { background-color: #dcfce3; color: #166534; }
+.badge.compra { background-color: #fee2e2; color: #991b1b; }
+.badge.ajuste { background-color: #fef3c7; color: #b45309; }
+
+.monto { font-weight: bold; }
+.monto.positivo { color: #166534; }
+.monto.negativo { color: #991b1b; }
+.monto.neutro { color: #475569; }

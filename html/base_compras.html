@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Base de Datos de Compras</title>
+    <link rel="stylesheet" href="../css/base_compras.css">
+</head>
+<body>
+
+    <header class="encabezado-base">
+        <div class="titulo-sistema">
+            <h1>BASE DE DATOS: COMPRAS</h1>
+            <p>Registro detallado de transacciones de entrada (Formato Excel)</p>
+        </div>
+        <div class="acciones-usuario">
+            <button class="btn-secundario" id="btn-volver">Volver al Dashboard</button>
+        </div>
+    </header>
+
+    <main class="contenedor-base">
+        
+        <!-- Panel de Filtros -->
+        <section class="barra-herramientas">
+            <div class="filtros-excel">
+                <div class="grupo-filtro">
+                    <label>Mes:</label>
+                    <select id="filtro-mes">
+                        <option value="Todos">Todos</option>
+                        <option value="10">Octubre</option>
+                    </select>
+                </div>
+                <div class="grupo-filtro">
+                    <label>Proveedor:</label>
+                    <input type="text" id="filtro-proveedor" placeholder="Buscar proveedor...">
+                </div>
+            </div>
+            <div class="grupo-botones">
+                <button class="btn-excel" id="btn-descargar-excel">
+                    <span class="icono-btn">📗</span> Descargar a Excel (.xlsx)
+                </button>
+            </div>
+        </section>
+
+        <!-- Tabla Cruda tipo Excel -->
+        <section class="panel-tabla-excel">
+            <div class="tabla-contenedor">
+                <table id="tabla-base-compras">
+                    <thead>
+                        <tr>
+                            <th>ID COMPRA</th>
+                            <th>FECHA</th>
+                            <th>NIT PROVEEDOR</th>
+                            <th>RAZON SOCIAL</th>
+                            <th>COD PROD</th>
+                            <th>PRODUCTO</th>
+                            <th class="texto-centro">CANTIDAD</th>
+                            <th class="texto-derecha">COSTO UNIT.</th>
+                            <th class="texto-derecha">SUBTOTAL</th>
+                            <th class="texto-derecha">IVA</th>
+                            <th class="texto-derecha">TOTAL FINAL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-base-compras">
+                        <!-- Las filas se cargaran con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/base_compras.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { background-color: #f4f6f9; }
+
+/* Encabezado */
+.encabezado-directorio {
+    background-color: #1a365d; color: white; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.titulo-sistema h1 { color: #d97706; font-size: 24px; font-weight: 800; }
+.titulo-sistema p { color: #cbd5e1; font-size: 13px; margin-top: 5px; }
+.btn-secundario { padding: 8px 16px; background-color: #f8fafc; color: #1a365d; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
+
+.contenedor-directorio { padding: 30px 40px; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+
+/* Barra de Herramientas */
+.barra-herramientas {
+    display: flex; justify-content: space-between; background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;
+}
+.grupo-busqueda input { width: 350px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 14px; }
+.btn-primario { padding: 10px 20px; background-color: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 14px; }
+.btn-primario:hover { background-color: #059669; }
+
+/* Panel de Formulario */
+.panel-formulario {
+    background: #f8fafc; padding: 25px; border-radius: 8px; border: 2px dashed #cbd5e1; margin-bottom: 10px;
+}
+.panel-formulario h2 { color: #1e293b; font-size: 18px; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+
+.grid-formulario { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+
+.grupo-input label { display: block; font-size: 13px; font-weight: bold; color: #475569; margin-bottom: 5px; text-transform: uppercase;}
+.grupo-input input { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 14px; }
+
+.acciones-form { grid-column: span 3; display: flex; justify-content: flex-end; gap: 10px; margin-top: 15px; }
+.btn-cancelar { padding: 10px 20px; background-color: #e2e8f0; color: #475569; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.btn-guardar { padding: 10px 25px; background-color: #1a365d; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.btn-guardar:hover { background-color: #1e3a8a; }
+
+/* Tabla */
+.panel-tabla { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; overflow: hidden; }
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th { background-color: #0f172a; color: white; font-weight: bold; padding: 15px; text-align: left; font-size: 13px; position: sticky; top: 0; }
+td { padding: 12px 15px; border-bottom: 1px solid #e2e8f0; font-size: 14px; color: #334155; }
+tbody tr:nth-child(even) { background-color: #f8fafc; }
+tbody tr:hover { background-color: #f1f5f9; }
+
+.texto-centro { text-align: center !important; }
+.badge-doc { font-weight: bold; color: #1a365d; background-color: #e2e8f0; padding: 4px 8px; border-radius: 4px; font-family: monospace; }
+.btn-accion-tabla { background: none; border: none; cursor: pointer; font-size: 18px; margin: 0 5px; transition: transform 0.2s; }
+.btn-accion-tabla:hover { transform: scale(1.2); }

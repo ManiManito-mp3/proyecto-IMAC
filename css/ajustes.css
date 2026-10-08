@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-ajustes {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; }
+.titulo-sistema p { color: #cbd5e1; font-size: 12px; }
+
+.btn-secundario {
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    color: #1a365d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-peligro {
+    padding: 8px 16px;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Contenedor a dos columnas */
+.contenedor-ajustes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.panel-formulario, .panel-mantenimiento {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #334155;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* Formulario */
+.grupo-input { margin-bottom: 15px; }
+.grupo-input label { display: block; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 5px; }
+.grupo-input input[type="text"], .grupo-input select {
+    width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 5px; font-size: 14px;
+}
+
+.btn-primario {
+    width: 100%; padding: 12px; background-color: #1a365d; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin-top: 10px;
+}
+
+/* --- Estilos para la zona de subida de archivos --- */
+.zona-upload {
+    position: relative;
+    border: 2px dashed #cbd5e1;
+    border-radius: 6px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.zona-upload:hover {
+    border-color: #1a365d;
+    background-color: #f1f5f9;
+}
+
+.zona-upload .icono-upload {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.zona-upload p {
+    color: #64748b;
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.zona-upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Tarjetas de mantenimiento */
+.tarjeta-accion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-accion h3 { color: #1e293b; font-size: 15px; margin-bottom: 5px; }
+.tarjeta-accion p { color: #64748b; font-size: 13px; }
+
+.tarjeta-accion.alerta {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+}
+
+.tarjeta-accion.alerta h3 { color: #991b1b; }

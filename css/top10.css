@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+/* Encabezado */
+.encabezado-top10 {
+    background-color: #1a365d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.titulo-sistema h1 { color: #d97706; font-size: 24px; }
+.titulo-sistema p { color: #cbd5e1; font-size: 12px; }
+
+.acciones-usuario { display: flex; gap: 10px; }
+
+.btn-secundario {
+    padding: 8px 16px;
+    background-color: #f8fafc;
+    color: #1a365d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Contenedor principal */
+.contenedor-top10 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjetas Estadísticas Superiores */
+.resumen-estadistico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-dato {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #d97706;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.tarjeta-dato h3 { color: #64748b; font-size: 14px; text-transform: uppercase; margin-bottom: 8px; }
+.tarjeta-dato .dato-principal { color: #1a365d; font-size: 22px; font-weight: bold; margin-bottom: 5px; }
+.tarjeta-dato .dato-secundario { color: #94a3b8; font-size: 13px; }
+
+/* Panel de la Tabla */
+.panel-tabla {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+h2 {
+    color: #334155;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+/* Tabla */
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+th { background-color: #f8fafc; color: #475569; font-weight: 600; }
+
+.fila-destacada { background-color: #fefce8; } /* Fondo amarillo muy claro para el top 3 */
+
+/* Medallas y Posiciones */
+.medalla { font-weight: bold; padding: 4px 8px; border-radius: 4px; font-size: 13px; }
+.medalla.oro { background-color: #fef08a; color: #854d0e; }
+.medalla.plata { background-color: #e2e8f0; color: #475569; }
+.medalla.bronce { background-color: #ffedd5; color: #9a3412; }
+
+.posicion-normal {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #f1f5f9;
+    color: #475569;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.monto { font-weight: bold; color: #166534; }

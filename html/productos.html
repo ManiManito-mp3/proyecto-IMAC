@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAC - Catalogo de Productos</title>
+    <link rel="stylesheet" href="../css/productos.css">
+</head>
+<body>
+
+    <header class="encabezado-productos">
+        <div class="titulo-sistema">
+            <h1>CATALOGO DE PRODUCTOS</h1>
+            <p>Gestion de codigos, categorias y listas de precios</p>
+        </div>
+        <div class="acciones-superiores">
+            <button class="btn-icono-texto" id="btn-inicio">
+                <span class="icono">🏠</span>
+                <span>INICIO</span>
+            </button>
+            <button class="btn-icono-texto text-verde" id="btn-nuevo">
+                <span class="icono">➕</span>
+                <span>NUEVO ARTICULO</span>
+            </button>
+            <button class="btn-icono-texto" id="btn-actualizar">
+                <span class="icono">🔄</span>
+                <span>ACTUALIZAR</span>
+            </button>
+            <button class="btn-icono-texto" id="btn-buscar">
+                <span class="icono">🔍</span>
+                <span>BUSCAR</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="contenedor-productos">
+        
+        <section class="panel-tabla">
+            <div class="tabla-contenedor">
+                <table id="tabla-productos">
+                    <thead>
+                        <tr>
+                            <th>CODIGO</th>
+                            <th>DESCRIPCION DEL PRODUCTO</th>
+                            <th>CATEGORIA</th>
+                            <th>MEDIDA</th>
+                            <th>UBICACION</th>
+                            <th class="centro">STOCK MIN.</th>
+                            <th class="derecha">Precio Menor</th>
+                            <th class="derecha">Precio Mayor</th>
+                            <th class="derecha">Precio 3</th>
+                            <th class="derecha">Precio 4</th>
+                            <th class="derecha">Precio 5</th>
+                            <th class="derecha">Precio 6</th>
+                            <th class="centro">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-productos">
+                        <!-- Las filas se cargaran con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/productos.js"></script>
+</body>
+</html>
