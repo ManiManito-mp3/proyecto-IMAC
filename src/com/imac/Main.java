@@ -2,31 +2,36 @@ package com.imac;
 
 import com.imac.modelo.Cliente;
 import com.imac.dao.ClienteDAO;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        
-        System.out.println("Iniciando prueba de conexion y CRUD...");
-        
-        // 1. Instanciar el DAO
-        ClienteDAO clienteDao = new ClienteDAO();
-        
-        // 2. Crear un objeto Cliente con datos de prueba
-        Cliente nuevoCliente = new Cliente(
-            "1122334455", 
-            "CONSTRUCTORA JAVA", 
-            "3009998877", 
-            "AVENIDA SPRING 123", 
-            "java@constructora.com"
-        );
-        
-        // 3. Ejecutar el metodo de guardar (Create)
-        boolean guardado = clienteDao.guardarCliente(nuevoCliente);
-        
-        if (guardado) {
-            System.out.println("¡Exito! El cliente fue guardado en la base de datos MySQL.");
-        } else {
-            System.out.println("Fallo al guardar el cliente. Revisa tu conexion a XAMPP.");
+        ClienteDAO dao = new ClienteDAO();
+
+        System.out.println("Iniciando prueba completa de CRUD...\n");
+
+        // 1. INSERTAR (Create)
+        System.out.println("--- 1. PROBANDO INSERTAR ---");
+        Cliente nuevo = new Cliente("777666555", "CLIENTE PARA FOTO", "3000000", "SENA", "test@sena.com");
+        System.out.println("Insertado exitosamente: " + dao.guardarCliente(nuevo));
+
+        // 2. CONSULTAR (Read)
+        System.out.println("\n--- 2. PROBANDO CONSULTAR ---");
+        List<Cliente> clientes = dao.obtenerClientes();
+        for (Cliente c : clientes) {
+            System.out.println("Cliente en BD: " + c.getDocCliente() + " - " + c.getNombreCliente());
         }
+
+        // 3. ACTUALIZAR (Update)
+        System.out.println("\n--- 3. PROBANDO ACTUALIZAR ---");
+        Cliente modificado = new Cliente("777666555", "CLIENTE MODIFICADO", "3111111", "SENA 2", "mod@sena.com");
+        System.out.println("Actualizado exitosamente: " + dao.actualizarCliente(modificado));
+
+        // 4. ELIMINAR (Apagado para la foto)
+        System.out.println("\n--- 4. PROBANDO ELIMINAR (Desactivado) ---");
+        // boolean eliminado = dao.eliminarCliente("777666555");
+        // System.out.println("Eliminado exitosamente: " + eliminado);
+        System.out.println("El cliente se dejó en la base de datos para la captura.");
     }
 }
+    
