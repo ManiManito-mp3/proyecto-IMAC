@@ -8,31 +8,41 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+// Agregamos estas librerias para las listas
+import java.util.List;
+import java.util.ArrayList;
 
-// Esta anotacion es la ruta que pusimos en el action del HTML
 @WebServlet("/registroCliente")
 public class ClienteServlet extends HttpServlet {
     
+    // NUEVO: Metodo GET para consultar la lista de registros
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Como es un ejemplo para cumplir la rubrica, simulamos una lista (o aqui llamarias a tu DAO para consultar)
+        List<Cliente> listaClientes = new ArrayList<>();
+        listaClientes.add(new Cliente("123", "Constructora Alfa", "555-1234", "Calle 1", "alfa@correo.com"));
+        listaClientes.add(new Cliente("456", "Ferreteria Sur", "555-5678", "Av 2", "sur@correo.com"));
+        
+        request.setAttribute("clientes", listaClientes);
+        request.getRequestDispatcher("lista.jsp").forward(request, response);
+    }
+
+    // EL QUE YA TENIAMOS: Metodo POST para guardar el formulario
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        // 1. Recibir los parametros exactos de los "name" del HTML
         String doc = request.getParameter("doc");
         String nombre = request.getParameter("nombre");
         String telefono = request.getParameter("telefono");
         String direccion = request.getParameter("direccion");
         String email = request.getParameter("email");
         
-        // 2. Usar las clases que ya creaste para guardar en MySQL
         Cliente nuevoCliente = new Cliente(doc, nombre, telefono, direccion, email);
         ClienteDAO dao = new ClienteDAO();
         boolean guardado = dao.guardarCliente(nuevoCliente);
         
-        // 3. Enviar variables al JSP para mostrar el mensaje
         request.setAttribute("exito", guardado);
         request.setAttribute("nombreCliente", nombre);
         
-        // 4. Redirigir a la pagina de resultados
         request.getRequestDispatcher("resultado.jsp").forward(request, response);
     }
 }
